@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 
 //import route testimonials
 const testimonialsRouter = require('./routes/testimonials');
-app.use('/api/testimonials', testimonialsRouter); // use route testimonials di Express
+app.use('/api/testimonials', testimonialsRouter);
 
 app.listen(port, () => {
   console.log(`app running at http://localhost:${port}`)
