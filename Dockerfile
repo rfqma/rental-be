@@ -1,17 +1,17 @@
 # from base image node
-FROM node:8.11-slim
+FROM node:16
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # copying all the files from your file system to container file system
-COPY package.json .
+COPY package.json /app
 
 # install all dependencies
 RUN npm install
 
 # copy oter files as well
-COPY ./ .
+COPY . /app
+
 
 #expose the port
 EXPOSE 3001
